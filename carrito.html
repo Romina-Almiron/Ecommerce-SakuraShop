@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sakurashop</title>
+  <link rel="icon" type="image/x-icon" href="./img/favicon (1).png">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="wrapper">
+
+    <aside>
+      <nav>
+        <ul>
+
+          <li><a class="boton-menu boton-volver" href="./index.html">
+            <i class="fa-regular fa-hand-point-left"></i>Seguir comprando</a>
+          </li>
+          <li><a class="boton-menu boton-carrito active" href="./carrito.html">
+            <i class="fas fa-shopping-cart"></i>Carrito</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+  
+    <main>
+      <h2 class="titulo-principal">Carrito</h2>
+      <div class="contenedor-carrito">
+
+        <p class="carrito-vacío">Tú carrito esta vacío.<i class="fa-regular fa-face-sad-tear"></i></p>
+
+        <div class="carrito-productos disabled">
+
+          <div class="carrito-producto">
+            <img  class="carrito-imagen" src="./img/hogar1.jpg" alt="flor de sakura">
+
+            <div class="carrito-producto-titulo">
+              <small>Título</small>
+              <h3>Planta 01</h3>
+            </div>
+
+            <div class="carrito-producto-cantidad">
+              <small>Cantidad</small>
+              <p>1</p>
+            </div>
+
+            <div class="carrito-producto-precio">
+               <small>Precio</small>
+               <p>$150</p>
+            </div>
+
+            <div class="carrito-producto-subtotal">
+              <small>Subtotal</small>
+              <p>$150</p>
+            </div>
+            <button class="carrito-producto-eliminar"><i class="fa-solid fa-trash"></i></button>
+          </div>
+
+          <div class="carrito-producto">
+            <img class="carrito-imagen" src="./img/hogar2.jpg" alt="flor de sakura">
+
+            <div class="carrito-producto-titulo">
+              <small>Título</small>
+              <h3>Planta 02</h3>
+            </div>
+
+            <div class="carrito-producto-cantidad">
+              <small>Cantidad</small>
+              <p>2</p>
+            </div>
+
+            <div class="carrito-producto-precio">
+               <small>Precio</small>
+               <p>$200</p>
+            </div>
+
+            <div class="carrito-producto-subtotal">
+              <small>Subtotal</small>
+              <p>$350</p>
+            </div>
+            <button class="carrito-producto-eliminar"><i class="fa-solid fa-trash"></i></button>
+          </div>
+
+        </div>
+        <div class="carrito-acciones disabled">
+          <div class="acciones-izq">
+            <button class="carrito-vaciar">Vaciar carrito</button>
+          </div>
+          <div class="acciones-dech">
+            <div class="carrito-total">
+               <p>Total:</p>
+               <p id="total">$350</p>
+            </div>
+            <button class="carrito-comprar">Comprar ahora</button>
+          </div>
+        </div>
+        <p class="carrito-lleno disabled" >Muchas gracias por elegirnos.<br>
+          Disfrute de su compra!!<i class="fas fa-face-smile"></i></i></p>
+              
+      </div>
+  
+           
+           
+            
+            
+    </main>
+  </div>  
+  <footer>
+    <div class="sociales">
+      <a href="#" class="fab fa-instagram"></a>
+      <a href="#" class="fab fa-facebook"></a>
+      <a href="#" class="fab fa-linkedin"></a>
+    </div>
+    <p class="texto-footer">© Copyright-2023 Romina Almiron | todos los derechos reservados</p>
+  </footer> 
+
+  <script src="https://kit.fontawesome.com/73f851add2.js" crossorigin="anonymus"></script>
+</body>
+</html>
