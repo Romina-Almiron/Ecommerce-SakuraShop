@@ -17,6 +17,7 @@
 
   font-family: 'Roboto', sans-serif;
 }
+
 .header-1,
 .header-2{
     display: flex;
@@ -58,6 +59,7 @@
     color: var(--clr-3);
 }
 /*------------BARRA ICONOS-----------*/
+
 .header-2{
     background: var(--barra-1);
     box-shadow: 0.5rem 0.5rem rgb(0, 0, 0, .1);
@@ -65,6 +67,7 @@
     z-index: 10000;
     /*margin-bottom: 5rem;*/
 }
+
 .header-2 .iconos a{
     font-size: 1.5rem;
     margin-left: 2rem;
@@ -394,4 +397,45 @@ footer{
 }
 
 
+
+/* media queries*/
+
+/* styles for screens between 768px and 480px */
+
+@media  (max-width: 768px) {
+    .header-1 .buscador-container{
+        width: 100%;
+    }
+    #buscador{
+        font-size: 1.2rem;
+    }
+    .header-1 .buscador-container label{
+        font-size: 1.5rem;
+    }
+    .iconos a{
+        font-size: 1.2rem;
+        margin-left: 1rem;
+    }
+}
+
+/* styles for screens smaller than 480px */
+
+@media (max-width: 480px) {
+    .header-1 .buscador-container{
+        padding: 0.5rem;
+        border-radius: 0.3rem;
+    }
+    #buscador{
+        font-size: 1rem;
+        padding: 0.5rem;
+        border-radius: 0.3rem;
+    }
+    .header-1 .buscador-container label{
+        font-size: 1.2rem;
+    }
+    .iconos a{
+        font-size: 1rem;
+        margin-left: 0.5rem;
+    }
+}
 
