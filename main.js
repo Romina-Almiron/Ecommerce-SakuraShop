@@ -1,142 +1,143 @@
-let categoria;
-let producto;
-let cantidad;
-let precio;
-let total = 0;
+const categorias = [
+  {
+    nombre:"Plantas de hogar",
+    productos:[
+      { nombre: "Planta1", precio: 100},
+      { nombre: "Planta2", precio: 150},
+      { nombre: "Planta3",  precio:200},
+    ],
+  },
+  {
+    nombre: "Plantas de oficina",
+    productos:[
+      {nombre: "Poficina1", precio: 100},
+      {nombre: "Poficina2", precio: 150},
+      {nombre: "Poficina3", precio: 200},
+    ],
+  },
+  {
+    nombre: "Plantas para regalar",
+    productos:[
+      { nombre: "Pregalo1", precio: 100 },
+      { nombre: "Pregalo2", precio: 150 },
+      { nombre: "Pregalo3", precio: 200 },
+    ],
+  },
+];
 
-const bienvenidoUsuario = () =>{
+const bienvenidoUsuario = () => {
+  let nombres = "";
 
-  let nombre = prompt("Por favor ingrese un nombre:").toUpperCase();
+  while (nombres === "" || /[^a-zA-Z]/.test(nombres)) {
+    nombres = prompt("Por favor ingrese un nombre:").toUpperCase();
+  }
 
-  while(isNaN(nombre) && nombre !== ""){
+  nombres = nombres.split(" ");
 
+  nombres.forEach(nombre => {
     const bienvenidoMensaje = `Bienvenida/o ${nombre} a Sakurashop!`;
     alert(bienvenidoMensaje);
     mostrarCategorias();
-    return;
-  }
-  alert("Ingrese nombre válido.");
-  bienvenidoUsuario();
+  });
 }
 
-// lista de las categorias y  opcion de finalizar compra
+let total = 0;
+let carrito = [];
 
-//Esta funcion lista todas las categorias y la opcion de finalizar compra
+function mostarProductosPorCategoria(categoriaSeleccionada){
+  const categoria = categorias[categoriaSeleccionada - 1];
+  const productos = categoria.productos.map((producto, index) => `${index + 1}. ${producto.nombre} - $${producto.precio}`);
+  const productoSeleccionado = parseInt(prompt(`Seleccione un producto:\n${productos.join("\n")}`));
+  if (isNaN(productoSeleccionado) || productoSeleccionado < 1 || productoSeleccionado > productos.length) {
+    preguntarCategoria();
+    return;
+  }
+  const producto = categoria.productos[productoSeleccionado - 1];
+  precio = producto.precio;
+  confirmarProducto(producto.nombre);
+}
+
+function confirmarProducto(nombreProducto) {
+  const cantidad = parseInt(prompt("Indique la cantidad que desea comprar:"));
+  
+    if (isNaN(cantidad)) {
+      preguntarCategoria();
+      return;
+    }
+  
+  const añadir = confirm(`El producto ${nombreProducto} cuesta $${precio}. ¿Desea agregarlo al carrito?`);
+  
+    if (añadir) {
+      const subtotal = precio * cantidad;
+      carrito.push({ nombre: nombreProducto, cantidad: cantidad, precio: precio, subtotal: subtotal });
+      total += subtotal;
+      alert(`El producto se ha agregado al carrito. Su total actual es: $${total}`);
+    }
+    preguntarCategoria();
+}
 
 function mostrarCategorias() {
+  const opciones = ["Finalizar compra", ...categorias.map((categoria) => categoria.nombre)];
+  const categoriaSeleccionada = parseInt(prompt(`Seleccione una categoría:\n${opciones.map((opcion, index) => `${index + 1}. ${opcion}`).join("\n")}`));
   
-  categoria = parseInt(prompt("Por favor, seleccione una categoría:\n1. Plantas de hogar\n2. Plantas de oficina\n3. Plantas para regalar\n4. Finalizar compra"));
-
-  if (categoria == 4) {
-    finalizarCompra();
-    return;
-  } else if (categoria > 3 || categoria < 1) {
-    alert("Esa categoría no existe");
-    mostrarCategorias();
-    return;
-  } else {
-    mostrarProductosPorCategoria(categoria);
-  }
-  if (isNaN(categoria)) {
-    finalizarCompra();
-  }
+    if (isNaN(categoriaSeleccionada) || categoriaSeleccionada < 1 || categoriaSeleccionada > opciones.length) {
+      finalizarCompra();
+      return;
+    }
+    if (categoriaSeleccionada === 1) {
+      finalizarCompra();
+      return;
+    }
+  mostarProductosPorCategoria(categoriaSeleccionada - 1);
 }
 
-function mostrarProductosPorCategoria(categoriaSeleccionada) {
-
-  //Con el switch comparo la categoria seleccionada y muestro los productos corrspóndientes
-
-  switch (categoriaSeleccionada) {
-      case 1:
-          producto = parseInt(prompt("Seleccione un producto:\n1. Planta1 - $100\n2. Planta2 - $150\n3. Planta3 - $200"));
-          if (!isNaN(producto)) {
-              switch (producto) {
-                  case 1: precio = 100; break;
-                  case 2: precio = 150; break;
-                  case 3: precio = 200; break;
-                  default: mostrarProductosPorCategoria(categoria); break;
-              }
-
-              confirmarProducto();
-              return;
-          } else {
-              preguntarCategoria();
-              return;
-          }
-          break;
-      case 2:
-          producto = parseInt(prompt("Seleccione un producto:\n1. Poficina1 - $100\n2. Poficina2 - $150\n3. Poficina33 - $200"));
-          if (!isNaN(producto)) {
-              switch (producto) {
-                  case 1: precio = 100; break;
-                  case 2: precio = 150; break;
-                  case 3: precio = 200; break;
-                  default: mostrarProductosPorCategoria(categoria); break;
-              }
-              confirmarProducto();
-              return;
-          } else {
-              preguntarCategoria();
-              return;
-          }
-          break;
-      case 3:
-          producto = parseInt(prompt("Seleccione un producto:\n1. Pregalo1 - $100\n2. Pregalo2 - $150\n3. Pregalo3 - $200"));
-          if (!isNaN(producto)) {
-              switch (producto) {
-                  case 1: precio = 100; break;
-                  case 2: precio = 150; break;
-                  case 3: precio = 200; break;
-                  default: mostrarProductosPorCategoria(categoria); break;
-              }
-              confirmarProducto();
-              return;
-          } else {
-              preguntarCategoria();
-              return;
-          }
-          break;
-  }
-}
-
-function confirmarProducto() {
-
-  let añadir = confirm("El producto seleccionado cuesta $" + precio + ". ¿Desea agregarlo al carrito?");
-  if (añadir) {
-      cantidad = parseInt(prompt("Por favor, indique la cantidad que desea comprar:"));
-      if (!isNaN(cantidad)) {
-        total += precio * cantidad;
-        alert("El producto se ha agregado al carrito. Su total actual es: $" + total);
-      } else {
-        preguntarCategoria();
-      }
-  } else {
-    preguntarCategoria();
-  }
-  preguntarCategoria();
-}
+let finalizada = false;
 
 function preguntarCategoria() {
-  if (confirm("¿Desea seguir viendo productos de la categoría anterior?")) {
-    mostrarProductosPorCategoria(categoria);
-  } else {
+  if (!finalizada) {
     mostrarCategorias();
+  }
+}
+
+function mostrarCarrito() {
+
+  if (carrito.length === 0) {
+    alert('El carrito está vacío');
+  } else {
+    let mensaje = 'Productos en el carrito:\n';
+    for (let i = 0; i < carrito.length; i++) {
+      mensaje += `${i+1}. ${carrito[i].nombre} - $${carrito[i].precio}\n`;
+    }
+    mensaje += `Total: $${total}`;
+    alert(mensaje);
   }
 }
 
 function finalizarCompra() {
-  if (confirm("Desea finalizar su compra?")) {
-    mostrarFinal();
-  } else {
-    mostrarCategorias();
+  let confirmar = true;
+  while (confirmar && carrito.length > 0) {
+    mostrarCarrito();
+    confirmar = confirm(`El total de su compra es: $${total}. ¿Desea finalizar la compra o eliminar algún producto?`);
+    if (confirmar) {
+      const index = prompt(`Ingrese el número del producto que desea eliminar o presione Cancelar para finalizar la compra`);
+      if (index !== null) {
+        const i = parseInt(index) - 1;
+        if (!isNaN(i) && i >= 0 && i < carrito.length) {
+          const eliminado = carrito.splice(i, 1);
+          total -= eliminado[0].precio;
+          alert(`El producto ${eliminado[0].nombre} ha sido eliminado del carrito`);
+        } else {
+          alert(`El número de producto ingresado no es válido`);
+        }
+      } else {
+        confirmar = false;
+      }
+    }
   }
-}
-
-function mostrarFinal() {
-  if (total > 0) {
-    alert("Gracias por su compra, su total es de: $" + total);
-  } else {
-    alert("Esperamos que vuelva pronto.");
+  if (!confirmar) {
+    alert(`Gracias por su compra. Su total fue de: $${total}`);
+    total = 0;
   }
 }
 bienvenidoUsuario();
+
