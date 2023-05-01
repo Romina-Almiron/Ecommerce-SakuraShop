@@ -16,13 +16,15 @@
   <header>
     <div class="header-1">
       <a href="#" class="logo"><img src="./img/LogoSample_ByTailorBrands (1).png" alt="Logo de flor sakura" class="logo-img" width="100" height="100"></a>
-
-      <form action="" class="buscador-container">
-        <input type="search" id="buscador" placeholder="Buscar ...">
-        <label for="buscador" class="fas fa-search"></label>
-      </form>
+      <div id="contenedor-buscador">
+        <form action="" class="buscador-container">
+         <input type="search" id="buscador" placeholder="Buscar ...">
+         <label for="buscador" class="fas fa-search"></label>
+        </form>
+      </div>
 
     </div>
+    <!----
     <div class="header-2">
 
       <div class="iconos">
@@ -31,290 +33,39 @@
         <a href="#" class="fas fa-user-circle"></a>
       </div>
     </div>
-
-    
-
+  -->
     <div class="wrapper">
 
       <aside>
         <nav>
           <ul class="menu">
-            <li><button class="boton-menu boton-categoria active"><i class="fa-solid fa-hand-point-right"></i>Todos los productos</button>
+            <li><button id ="todos los productos" class="boton-menu boton-categoria active"><i class="fa-solid fa-hand-point-right"></i>Todos los productos</button>
             </li>
-            <li><button class="boton-menu boton-categoria"><i class="fa-regular fa-hand-point-right"></i>Plantas para hogar</button>
+            <li><button id="plantas de interior" class="boton-menu boton-categoria"><i class="fa-regular fa-hand-point-right"></i>Plantas de interior</button>
             </li>
-            <li><button class="boton-menu boton-categoria"><i class="fa-regular fa-hand-point-right"></i>Plantas para oficina</button>
+            <li><button id="plantas de oficina" class="boton-menu boton-categoria"><i class="fa-regular fa-hand-point-right"></i>Plantas de oficina</button>
             </li>
-            <li><button class="boton-menu boton-categoria"><i class="fa-regular fa-hand-point-right"></i>Plantas para regalar</button>
+            <li><button id="plantas para regalar" class="boton-menu boton-categoria"><i class="fa-regular fa-hand-point-right"></i>Plantas para regalar</button>
             </li>
             <li><a class="boton-menu boton-carrito " href="./carrito.html">
-            <i class="fas fa-shopping-cart"></i>Carrito<span class="numerito">0</span></a></li>
+            <i class="fas fa-shopping-cart"></i>Carrito<span id="numerito" class="numerito">0</span></a></li>
           </ul>
+          
+
         </nav>
       </aside>
 
       <main>
-        <h2 class="titulo-principal">Todos los productos</h2>
-
-        <div class="contenedor-productos">
-
-          <div class="contenedor-producto">
-
-            <div class="iconos-producto">
-              <a href="#" class="fas fa-heart"></a>
-              <a href="#" class="fas fa-share"></a>
-              <a href="#" class="fas fa-eye"></a>
-            </div>
-
-            <img class="producto-imagen"  src="img/hogar1.jpg" alt="flor sakura">
-
-            <h3>Planta1</h3>
-
-            <div class="estrellas">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-
-            <div class="cantidad">
-              <span>Cantidad : </span> 
-              <input type="number" min="1" max="100" value="1">
-            </div>
-
-            <div class="precio">$150</div>
-            <button class="producto-agregar">Agregar</button>
-          </div>
-          <div class="contenedor-producto">
-
-            <div class="iconos-producto">
-              <a href="#" class="fas fa-heart"></a>
-              <a href="#" class="fas fa-share"></a>
-              <a href="#" class="fas fa-eye"></a>
-            </div>
-
-            <img class="producto-imagen" src="img/hogar2.jpg" alt="flor sakura">
-
-            <h3>Planta2</h3>
-
-            <div class="estrellas">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-
-            <div class="cantidad">
-              <span>Cantidad : </span> 
-              <input type="number" min="1" max="100" value="1">
-            </div>
-
-            <div class="precio">$200</div>
-            <button class="producto-agregar">Agregar</button>
-          </div>
-          <div class="contenedor-producto">
-
-            <div class="iconos-producto">
-             <a href="#" class="fas fa-heart"></a>
-             <a href="#" class="fas fa-share"></a>
-             <a href="#" class="fas fa-eye"></a>
-            </div>
-
-            <img class="producto-imagen" src="img/hogar3.jpg" alt="flor sakura">
-
-            <h3>Planta3</h3>
-
-            <div class="estrellas">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-
-            <div class="cantidad">
-              <span>Cantidad : </span> 
-              <input type="number" min="1" max="100" value="1">
-            </div>
-
-            <div class="precio">$300</div>
-            <button class="producto-agregar">Agregar</button>
-          </div>
-          <div class="contenedor-producto">
-
-            <div class="iconos-producto">
-              <a href="#" class="fas fa-heart"></a>
-              <a href="#" class="fas fa-share"></a>
-              <a href="#" class="fas fa-eye"></a>
-            </div>
-
-            <img class="producto-imagen" src="img/oficina1.jpg" alt="flor sakura">
-
-            <h3>Planta4</h3>
-
-            <div class="estrellas">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-
-            <div class="cantidad">
-              <span>Cantidad : </span> 
-              <input type="number" min="1" max="100" value="1">
-            </div>
-
-            <div class="precio">$100</div>
-            <button class="producto-agregar">Agregar</button>
-          </div>
-          <div class="contenedor-producto">
-
-            <div class="iconos-producto">
-              <a href="#" class="fas fa-heart"></a>
-              <a href="#" class="fas fa-share"></a>
-              <a href="#" class="fas fa-eye"></a>
-            </div>
-
-            <img class="producto-imagen"  src="img/oaficina2.jpg" alt="flor sakura">
-
-            <h3>Planta5</h3>
-
-            <div class="estrellas">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-
-            <div class="cantidad">
-              <span>Cantidad : </span> 
-              <input type="number" min="1" max="100" value="1">
-            </div>
-
-            <div class="precio">$150</div>
-            <button class="producto-agregar">Agregar</button>
-          </div>
-          <div class="contenedor-producto">
-
-            <div class="iconos-producto">
-              <a href="#" class="fas fa-heart"></a>
-              <a href="#" class="fas fa-share"></a>
-              <a href="#" class="fas fa-eye"></a>
-            </div>
-
-            <img class="producto-imagen" src="img/oficina3.jpg" alt="flor sakura">
-
-            <h3>Planta6</h3>
-
-            <div class="estrellas">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-
-            <div class="cantidad">
-              <span>Cantidad : </span> 
-              <input type="number" min="1" max="100" value="1">
-            </div>
-
-            <div class="precio">$150</div>
-            <button class="producto-agregar">Agregar</button>
-          </div>
-          <div class="contenedor-producto">
-
-            <div class="iconos-producto">
-              <a href="#" class="fas fa-heart"></a>
-              <a href="#" class="fas fa-share"></a>
-              <a href="#" class="fas fa-eye"></a>
-            </div>
-
-            <img class="producto-imagen" src="img/regalo1.jpg" alt="flor sakura">
-
-            <h3>Planta7</h3>
-
-            <div class="estrellas">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-
-            <div class="cantidad">
-              <span>Cantidad : </span> 
-              <input type="number" min="1" max="100" value="1">
-            </div>
-
-            <div class="precio">$150</div>
-            <button class="producto-agregar">Agregar</button>
-          </div>
-          <div class="contenedor-producto">
-
-            <div class="iconos-producto">
-              <a href="#" class="fas fa-heart"></a>
-              <a href="#" class="fas fa-share"></a>
-              <a href="#" class="fas fa-eye"></a>
-            </div>
-
-            <img class="producto-imagen" src="img/regalo2.jpg" alt="flor sakura">
-
-            <h3>Planta8</h3>
-
-            <div class="estrellas">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-
-            <div class="cantidad">
-              <span>Cantidad : </span> 
-              <input type="number" min="1" max="100" value="1">
-            </div>
-
-            <div class="precio">$150</div>
-            <button class="producto-agregar">Agregar</button>
-          </div>
-          <div class="contenedor-producto">
-
-            <div class="iconos-producto">
-              <a href="#" class="fas fa-heart"></a>
-              <a href="#" class="fas fa-share"></a>
-              <a href="#" class="fas fa-eye"></a>
-            </div>
-
-            <img class="producto-imagen" src="img/regalo3.jpg" alt="flor sakura">
-
-            <h3>Planta9</h3>
-
-            <div class="estrellas">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-
-            <div class="cantidad">
-              <span>Cantidad : </span> 
-              <input type="number" min="1" max="100" value="1">
-            </div>
-
-            <div class="precio">$150</div>
-            <button class="producto-agregar">Agregar</button>
-          </div>
+        <h2 class="titulo-principal" id="titulo-principal">Todos los productos</h2>
+        
+        <div id="contenedor-productos" class="contenedor-productos">
+         <!---SE RELLENA CON JS -->
         </div>
       </main>
+
     </div>  
-    
   </header>
+
   <footer>
     <div class="sociales">
       <a href="#" class="fab fa-instagram"></a>
