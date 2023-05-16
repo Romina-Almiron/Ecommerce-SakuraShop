@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  <header>
+ <!---- <header>
     <div class="header-1">
       <a href="#" class="logo"><img src="./img/LogoSample_ByTailorBrands (1).png" alt="Logo de flor sakura" class="logo-img" width="100" height="100"></a>
       <div id="contenedor-buscador">
@@ -24,39 +24,74 @@
       </div>
 
     </div>
-    <!----
-    <div class="header-2">
-
-      <div class="iconos">
-        <a href="./carrito.html" class="fas fa-shopping-cart"></a> 
-        <a href="#" class="fas fa-heart"></a>
-        <a href="#" class="fas fa-user-circle"></a>
-      </div>
-    </div>
-  -->
+  </header> -->
+    
     <div class="wrapper">
 
+      <header class="header-mobil">
+        <a href="#" class="logo"><img src="./img/LogoSample_ByTailorBrands (1).png" alt="Logo de flor sakura"  width="80" height="80"></a>
+
+        <div id="contenedor-buscador">
+          <form action="" class="buscador-container">
+           <input type="search" id="buscador" placeholder="Buscar ...">
+           <label for="buscador" class="fas fa-search"></label>
+          </form>
+        </div>
+
+        <button class="open-menu" id="open-menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </header>
+      
+      <!--<header>
+        <div class="header-1">
+          <a href="#" class="logo"><img src="./img/LogoSample_ByTailorBrands (1).png" alt="Logo de flor sakura" class="logo-img" width="100" height="100"></a>
+          <div id="contenedor-buscador">
+            <form action="" class="buscador-container">
+             <input type="search" id="buscador" placeholder="Buscar ...">
+             <label for="buscador" class="fas fa-search"></label>
+            </form>
+          </div>
+    
+        </div>
+      </header>-->
+       
       <aside>
+
+        <button class="cerrar-menu" id="cerrar-menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <header>
+          <a href="./index.html" class="logo"><img src="./img/LogoSample_ByTailorBrands (1).png" alt="Logo de flor sakura"  width="120" height="120"></a>
+
+          <div id="contenedor-buscador">
+            <form action="" class="buscador-container">
+             <input type="search" id="buscador" placeholder="Buscar ...">
+             <label for="buscador" class="fas fa-search"></label>
+            </form>
+          </div>
+        </header>
+
         <nav>
           <ul class="menu">
-            <li><button id ="todos los productos" class="boton-menu boton-categoria active"><i class="fa-solid fa-hand-point-right"></i>Todos los productos</button>
+            <li><button id ="Productos" class="boton-menu boton-categoria active"><!--<i class="fa-solid fa-hand-point-right"></i>-->Productos</button>
             </li>
-            <li><button id="plantas de interior" class="boton-menu boton-categoria"><i class="fa-regular fa-hand-point-right"></i>Plantas de interior</button>
+            <li><button id="plantas de interior" class="boton-menu boton-categoria"><!--<i class="fa-regular fa-hand-point-right"></i>-->Plantas de interior</button>
             </li>
-            <li><button id="plantas de oficina" class="boton-menu boton-categoria"><i class="fa-regular fa-hand-point-right"></i>Plantas de oficina</button>
+            <li><button id="plantas de oficina" class="boton-menu boton-categoria"><!--<i class="fa-regular fa-hand-point-right"></i>-->Plantas de oficina</button>
             </li>
-            <li><button id="plantas para regalar" class="boton-menu boton-categoria"><i class="fa-regular fa-hand-point-right"></i>Plantas para regalar</button>
+            <li><button id="plantas para regalar" class="boton-menu boton-categoria"><!--<i class="fa-regular fa-hand-point-right"></i>-->Plantas para regalar</button>
             </li>
             <li><a class="boton-menu boton-carrito " href="./carrito.html">
             <i class="fas fa-shopping-cart"></i>Carrito<span id="numerito" class="numerito">0</span></a></li>
           </ul>
           
-
         </nav>
       </aside>
 
       <main>
-        <h2 class="titulo-principal" id="titulo-principal">Todos los productos</h2>
+        <h2 class="titulo-principal" id="titulo-principal">Productos</h2>
         
         <div id="contenedor-productos" class="contenedor-productos">
          <!---SE RELLENA CON JS -->
@@ -64,7 +99,7 @@
       </main>
 
     </div>  
-  </header>
+  
 
   <footer>
     <div class="sociales">
@@ -77,6 +112,7 @@
     
   
   <script src="./main.js"></script>
+  <script src="./menu.js"></script>
   <script src="https://kit.fontawesome.com/73f851add2.js" crossorigin="anonymus"></script>
 </body>
 </html>

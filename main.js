@@ -157,13 +157,13 @@ botonesCategoria.forEach(boton =>{
     
    //Se llama  a productos por su categoria
 
-   if(e.currentTarget.id != "todos los productos"){
+   if(e.currentTarget.id != "Productos"){
     const productoCategoria = productos.find(producto => producto.categoria.id === e.currentTarget.id);
     tituloPrincipal.innerText = productoCategoria.categoria.nombre;
     const productosSeleccionados = productos.filter(producto => producto.categoria.id === e.currentTarget.id);
     cargarProductos(productosSeleccionados);
    }else{
-    tituloPrincipal.innerText = "Todos los productos";
+    tituloPrincipal.innerText = "Productos";
     cargarProductos(productos);
    }
   })
@@ -243,4 +243,7 @@ formBusqueda.addEventListener('submit', (event) => {
   event.preventDefault();
   buscarProductos.bind(buscador)();
 });
+
+
+
 
