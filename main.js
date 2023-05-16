@@ -228,7 +228,6 @@ function buscarProductos() {
     const mensaje = document.createElement("p");
     mensaje.classList.add("mensaje-error");
     mensaje.textContent = "Producto no encontrado.";
-    console.log(mensaje)
 
     // Se elimina cualquier mensaje previo que pueda existir
     const mensajeAnterior = contenedorProductos.querySelector("p");

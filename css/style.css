@@ -416,10 +416,10 @@ h2{
     gap: 1rem;
 }
 .carrito-comprar{
-    background-color: var(--clr-3);
+    background-color:rgb(170, 61, 61) ;
     padding: 1rem;
     border-radius: 1rem;
-    color: var(--barra-1);
+    color: var(--clr-3);
     text-transform: uppercase;
     cursor: pointer;
     border-top-right-radius: 6.5rem;
@@ -519,9 +519,6 @@ footer{
     /*
     .contenedor-productos{
         grid-template-columns: 1fr 1fr;
-        display: flex;
-        flex-direction: column;
-        gap:0.25rem
     }
     */
     .header-mobil{
@@ -553,6 +550,7 @@ footer{
         flex-wrap: wrap;
         row-gap: 1rem;
     }
+    /*
     .buscador-container{
         width: 55%;
         padding: 0.1rem;
@@ -569,6 +567,7 @@ footer{
         font-size: 1rem;
         padding: 0.1rem;
     }
+    */
     .boton-menu{
         font-size: 1rem;
         gap: 1rem;
@@ -596,9 +595,11 @@ footer{
         padding:.2rem 1rem;
         font-size: 0.85rem;
     }
+    
     .titulo{
         font-size: 1rem;
     }
+    
     .carrito-imagen{
         width: 3rem;
     }

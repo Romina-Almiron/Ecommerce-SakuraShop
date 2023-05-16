@@ -13,11 +13,7 @@ cerrarMenu.addEventListener("click", () => {
     aside.classList.remove("aside-visible");
 });
   
-//quitar el aside al seleccionar un boton de la categoria
 
 
-botonesCategoria.forEach(boton => boton.addEventListener("click",() =>{
-    aside.classList.remove("aside-visible");
-}));
     
 
