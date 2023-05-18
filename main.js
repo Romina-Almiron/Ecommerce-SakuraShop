@@ -1,117 +1,12 @@
-const productos = [
-  //Plantas de interior
-  {
-    id: "petunia",
-    titulo: "Petunia",
-    imagen: "img/hogar1.jpg",
-    categoria: {
-      nombre: "Plantas de interior",
-      id: "plantas de interior",
-    },
-    precio: 100,
-    cantidad: 0,
-    descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit."             
-  },
-  {
-    id: "camelia",
-    titulo: "Camelia",
-    imagen:"img/hogar2.jpg",
-    categoria: {
-      nombre:"Plantas de interior",
-      id:"plantas de interior",
-    },
-    precio: 200,
-    cantidad: 0,
-    descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-  },
-  {
-    id: "cilantro",
-    titulo: "Cilantro",
-    imagen: "img/hogar3.jpg",
-    categoria: {
-      nombre: "Plantas de interior",
-      id:"plantas de interior",
-    },
-    precio: 250,
-    cantidad: 0,
-    descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-  },
-  //Plantas de oficina
-  {
-    id: "helecho",
-    titulo: "Helecho",
-    imagen:"img/oficina1.jpg",
-    categoria: {
-      nombre: "Plantas de oficina",
-      id:"plantas de oficina",
-    },
-    precio: 150,
-    cantidad: 0,
-    descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-  },
-  {
-    id: "ketia",
-    titulo: "Ketia",
-    imagen:"img/oaficina2.jpg",
-    categoria: {
-      nombre: "Plantas de oficina",
-      id:"plantas de oficina",
-    },
-    precio: 200,
-    cantidad: 0,
-    descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-  },
-  {
-    id: "suculenta",
-    titulo: "Suculenta",
-    imagen:"img/oficina3.jpg",
-    categoria: {
-      nombre: "Plantas de oficina",
-      id:"plantas de oficina",
-    },
-    precio: 250,
-    cantidad: 0,
-    descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-  },
-  //Plantas para regalar
-  {
-    id: "anturio",
-    titulo: "Anturio",
-    imagen:"img/regalo1.jpg",
-    categoria: {
-      nombre: "Plantas para regalar",
-      id:"plantas para regalar",
-    },
-    precio: 100,
-    cantidad: 0,
-    descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-  },
-  {
-    id: "cretonia",
-    titulo: "Cretonia",
-    imagen:"img/regalo2.jpg",
-    categoria: {
-      nombre: "Plantas para regalar",
-      id:"plantas para regalar",
-    },
-    precio: 150,
-    cantidad : 0,
-    descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-  },
-  {
-    id: "orquidia",
-    titulo: "Orquidia",
-    imagen:"img/regalo3.jpg",
-    categoria: {
-      nombre: "Plantas para regalar",
-      id:"plantas para regalar",
-    },
-    precio: 200,
-    cantidad: 0,
-    descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-  },
-  
-];
+//FETCH
+let productos = [];
+
+fetch("./productos.json")
+  .then(response => response.json())
+  .then(data =>{
+    productos = data;
+    cargarProductos(productos);
+  })
 
 //DOM
 const contenedorProductos = document.querySelector("#contenedor-productos");
@@ -145,7 +40,7 @@ function cargarProductos(productosElejidos){
   })
   actualizarBotonesAgregar();
 }
-cargarProductos(productos);
+/*cargarProductos(productos);*/
 
 //MENU
 
@@ -189,6 +84,28 @@ if(productosEnCarritoLS){
 }
 
 function agregarAlCarrito(e){
+
+  /* libreria*/
+  Toastify({
+    text: "Añadido al carrito",
+    duration: 3000,
+    close: true,
+    gravity: "top", 
+    position: "right", 
+    stopOnFocus: true, 
+    style: {
+      background: "linear-gradient(to right,  #3C6255, #96c93d, #EAE7B1)",
+      borderRadius:"3rem",
+      textTransform:"uppercase",
+      fontSize:"0.75rem"
+    },
+    offset: {
+      x: `1.5rem`, 
+      y: `1.5rem` 
+    },
+    onClick: function(){} 
+  }).showToast();
+
   const idBoton = e.currentTarget.id;
   const productoAgregado = productos.find(producto => producto.id === idBoton);
 
@@ -224,25 +141,32 @@ function buscarProductos() {
     contenedorProductos.innerHTML = "";
     cargarProductos(productosFiltrados);
   } else {
-    // Muestra un mensaje indicando que el producto no existe
+
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Producto no encontrado!',
+      background:"#A6BB8D"
+    })
+
+   /* // Muestra un mensaje indicando que el producto no existe
     const mensaje = document.createElement("p");
     mensaje.classList.add("mensaje-error");
     mensaje.textContent = "Producto no encontrado.";
 
     // Se elimina cualquier mensaje previo que pueda existir
+    
     const mensajeAnterior = contenedorProductos.querySelector("p");
     if (mensajeAnterior) {
       mensajeAnterior.parentNode.removeChild(mensajeAnterior);
     }
     contenedorProductos.innerHTML = "";
-    contenedorProductos.appendChild(mensaje);
+    contenedorProductos.appendChild(mensaje);*/
   }
 }
 formBusqueda.addEventListener('submit', (event) => {
   event.preventDefault();
   buscarProductos.bind(buscador)();
 });
-
-
 
 

@@ -1,0 +1,112 @@
+[  
+   {
+      "id": "petunia",
+      "titulo": "Petunia",
+      "imagen": "img/hogar1.jpg",
+      "categoria": {
+        "nombre": "Plantas de interior",
+        "id": "plantas de interior"
+      },
+      "precio": 100,
+      "cantidad": 0,
+      "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit."             
+    },
+    {
+      "id": "camelia",
+      "titulo": "Camelia",
+      "imagen":"img/hogar2.jpg",
+      "categoria": {
+        "nombre":"Plantas de interior",
+        "id":"plantas de interior"
+      },
+      "precio": 200,
+      "cantidad": 0,
+      "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "id": "cilantro",
+      "titulo": "Cilantro",
+      "imagen": "img/hogar3.jpg",
+      "categoria": {
+        "nombre": "Plantas de interior",
+        "id":"plantas de interior"
+      },
+      "precio": 250,
+      "cantidad": 0,
+      "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    
+    {
+      "id": "helecho",
+      "titulo": "Helecho",
+      "imagen":"img/oficina1.jpg",
+      "categoria": {
+        "nombre": "Plantas de oficina",
+        "id":"plantas de oficina"
+      },
+      "precio": 150,
+      "cantidad": 0,
+      "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "id": "ketia",
+      "titulo": "Ketia",
+      "imagen":"img/oaficina2.jpg",
+      "categoria": {
+        "nombre": "Plantas de oficina",
+        "id":"plantas de oficina"
+      },
+      "precio": 200,
+      "cantidad": 0,
+      "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "id": "suculenta",
+      "titulo": "Suculenta",
+      "imagen":"img/oficina3.jpg",
+      "categoria": {
+        "nombre": "Plantas de oficina",
+        "id":"plantas de oficina"
+      },
+      "precio": 250,
+      "cantidad": 0,
+      "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    
+    {
+      "id": "anturio",
+      "titulo": "Anturio",
+      "imagen":"img/regalo1.jpg",
+      "categoria": {
+        "nombre": "Plantas para regalar",
+        "id":"plantas para regalar"
+      },
+      "precio": 100,
+      "cantidad": 0,
+      "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "id": "cretonia",
+      "titulo": "Cretonia",
+      "imagen":"img/regalo2.jpg",
+      "categoria": {
+        "nombre": "Plantas para regalar",
+        "id":"plantas para regalar"
+      },
+      "precio": 150,
+      "cantidad" : 0,
+      "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "id": "orquidia",
+      "titulo": "Orquidia",
+      "imagen":"img/regalo3.jpg",
+      "categoria": {
+        "nombre": "Plantas para regalar",
+        "id":"plantas para regalar"
+      },
+      "precio": 200,
+      "cantidad": 0,
+      "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    }   
+]

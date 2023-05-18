@@ -6,15 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sakurashop</title>
   <link rel="icon" type="image/x-icon" href="./img/favicon (1).png">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  <div class="wrapper">
 
+  <div class="wrapper">
+    
     <header class="header-mobil">
 
       <a href="./index.html" class="logo"><img src="./img/LogoSample_ByTailorBrands (1).png" alt="Logo de flor sakura"  width="100" height="100"></a>
-
       <button class="open-menu" id="open-menu">
         <i class="fa-solid fa-bars"></i>
       </button>
@@ -22,7 +23,6 @@
     </header>
 
     <aside>
-
       <button class="cerrar-menu" id="cerrar-menu">
         <i class="fa-solid fa-xmark"></i>
       </button>
@@ -41,10 +41,9 @@
   
     <main>
       <h2 class="titulo-principal">Carrito</h2>
+
       <div class="contenedor-carrito">
-
         <p id="carrito-vacío" class="carrito-vacío">Tú carrito esta vacío.<i class="fa-regular fa-face-sad-tear"></i></p>
-
         <div  id="carrito-productos" class="carrito-productos disabled">
         <!---SE RELLENA CON JS -->
         </div>
@@ -60,11 +59,12 @@
             <button id="carrito-comprar" class="carrito-comprar">Finalizar compra</button>
           </div>
         </div>
-        <p id="carrito-completo" class="carrito-completo disabled" >Muchas gracias por elegirnos.<br>
+        <p id="carrito-completo" class="carrito-completo disabled"  data-aos-easing="linear" data-aos-duration="1500" >Muchas gracias por elegirnos.<br>
           Disfrute de su compra!!<i class="fas fa-face-smile"></i></i></p>     
       </div>     
     </main>
   </div>  
+
   <footer>
     <div class="sociales">
       <a href="#" class="fab fa-instagram"></a>
@@ -74,9 +74,10 @@
     <p class="texto-footer">© Copyright-2023 Romina Almiron | todos los derechos reservados</p>
   </footer> 
 
+  
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="./menu.js"></script>
   <script src="./carrito.js"></script>
-  
   <script src="https://kit.fontawesome.com/73f851add2.js" crossorigin="anonymus"></script>
 </body>
 </html>
