@@ -18,7 +18,7 @@
 
 ### DEMO EN VIVO
 
-Puedes probar el sitio en vivo en [este enlace](https://romina-almiron.github.io/ProyectoJS-Almiron/).
+Puedes probar el sitio en vivo en [este enlace](https://romina-almiron.github.io/SakuraShop/).
 
 ### INSTALACIÓN
 
